@@ -5,9 +5,10 @@ import day29_inheritance.AnimalClass.Cat;
 import day29_inheritance.AnimalClass.Dog;
 import day30_inheritance.PhoneTask.Nokia;
 import day30_inheritance.PhoneTask.Phone;
-import day33_abstraction.EmployeeTask.Developer;
-import day33_abstraction.EmployeeTask.Employee;
-import day33_abstraction.EmployeeTask.Tester;
+import day33_abstraction.EmployeeTask.*;
+import day35_polymorphism.transportationTask.AutoPilot;
+import day35_polymorphism.transportationTask.Electric;
+import day35_polymorphism.transportationTask.Tesla;
 
 public class ReferenceTypeCastings {
     public static void main(String[] args) {
@@ -46,6 +47,26 @@ public class ReferenceTypeCastings {
 
         System.out.println(((Developer) employee).getProgrammingLanguage());
        // Tester tester = (Tester) employee;
+
+        System.out.println("-------------------------------------------------------");
+
+        Electric electric = new Tesla("Tesla", "Y", "Blue", 2022, 43000);
+        electric.charge();
+
+        System.out.println("--------------------------------------------------------------");
+
+        Employee employee1 = new Teacher("James", 31, 'M', "A324", "Math Teacher", 21000);
+
+        Employee employee2 = new Developer("Lucy", 29, 'F', "F456", "Java Developer", 25000, "Java");
+
+        Employee employee3 = new Driver("George", 40, 'M', "D333", "Truck driver", 90000);
+
+        Employee employee4 = new Tester("Me", 25, 'F', "L6467", "QA", 100000);
+
+        employee1.work();
+        employee2.work();
+        employee3.work();
+        employee4.work();
 
     }
 }
