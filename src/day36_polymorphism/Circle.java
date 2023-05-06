@@ -32,4 +32,24 @@ public class Circle {
                 "perimeter="+perimeter() +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if(!(obj instanceof Circle) ){ //if the specified object is not circle, then we should not cimpare them
+            System.err.println("Invalid object");
+            System.exit(1);
+        }
+
+        if(radius == ((Circle) obj).radius){ // if the current circle`s radius is equal to the given circle`s radius
+            return true;
+        }
+        return false;
+    }
 }
+
+
+
+
+
+
