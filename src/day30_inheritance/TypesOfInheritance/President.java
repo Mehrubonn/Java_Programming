@@ -1,0 +1,33 @@
+package day30_inheritance.TypesOfInheritance;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class President extends Person{
+    private LocalDate electedDate;
+
+    public President(String name, int age, char gender, LocalDate dateOfBirth) {
+        super(name, age, gender, dateOfBirth);
+        setElectedDate(electedDate);
+    }
+
+
+    public LocalDate getElectedDate() {
+        return electedDate;
+    }
+
+    public void setElectedDate(LocalDate electedDate) {
+        this.electedDate = electedDate;
+    }
+
+    public void lie(){
+        System.out.println(getName() + " is lying");
+    }
+
+
+    public String toString() {
+        return "President{" +
+                "electedDate=" + electedDate +
+                '}';
+    }
+}

@@ -1,0 +1,30 @@
+package day06_ifStatements;
+
+public class IdentifyNumber {
+
+    public static void main(String[] args) {
+
+        int number = 200;
+
+        boolean isPositive = number > 0; // If the number is greater than zero, then it`s a positive number
+        boolean isNegative = number < 0; // If the number is less than zero, then it`s a negative number.
+        // boolean isZero = number == 0; // If the number is equal to zero, then it is zero.
+
+        boolean isZero = !isPositive && !isNegative; // If the number is not positive and not negative, then it is zero.
+
+        System.out.println(number + " is positive number: " + isPositive);
+        System.out.println(number + " is negative number: " + isNegative);
+        System.out.println(number + " is Zero: " + isZero);
+    }
+}
+
+
+/*
+2. Create a class named IdentifyNumber, and write a program that can identify if the given number is positive, or negative or zero.
+			Ex:
+				number = 200
+			output:
+		        200 is positive number: true
+		        200 is negative number: false
+		        200 is zero: false
+ */
